@@ -1,23 +1,20 @@
 #include<stdio.h>
 int main(){
-	int a, b;
-	int x, y;
-	int ucln;
-	printf("Nhap a va b: ");
-	scanf("%d%d", &a, &b);
-		if(a<=0||b<=0){
-			printf("Du lieu khong hop le");
+	int n;
+	int a[100];
+	int max;
+	printf("Nhap so phan tu n: ");
+	scanf("%d", &n);
+	for(int i = 0; i <= n; i++){
+		printf("a[%d] = ", i);
+		scanf("%d", &a[i]);
+	}
+	max = a[0];
+	for(int i = 1; i < n; i++){
+		if(a[i] > max){
+			max = a[i];
 		}
-	else{
-		x=a;
-		y=b;
-		while(y!=0){
-			int r=x%y;
-			x=y;
-			y=r;
-		}
-		ucln = x;
-	printf("BCNN cua %d va %d la: %lld", a, b, (long long)a/ucln*b);
+	}
+	printf("So lon nhat trong mang la: %d", max);
 	return 0;
-}
 }
