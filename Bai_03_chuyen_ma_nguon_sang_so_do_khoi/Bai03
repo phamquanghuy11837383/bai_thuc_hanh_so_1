@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main(){
+	int a, b;
+	int x, y;
+	int ucln;
+	printf("Nhap a va b: ");
+	scanf("%d%d", &a, &b);
+		if(a<=0||b<=0){
+			printf("Du lieu khong hop le");
+		}
+	else{
+		x=a;
+		y=b;
+		while(y!=0){
+			int r=x%y;
+			x=y;
+			y=r;
+		}
+		ucln = x;
+	printf("BCNN cua %d va %d la: %lld", a, b, (long long)a/ucln*b);
+	return 0;
+}
+}
